@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Mongo, express plugin",
+    "version": "3.0.0",
+    "description": "Auto invite to like fb page",
+
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": ["plugin/scripts/vendors/jquery-3.1.1.min.js","plugin/scripts/js/query-selectors.js","plugin/scripts/js/app.js"],
+        "css": ["plugin/styles/css/styles.css"]
+    }],
+
+    "web_accessible_resources": [
+        "plugin/*"
+    ],
+    "permissions": [
+        "<all_urls>",
+        "storage"
+    ]
+}
